@@ -1,0 +1,1264 @@
+@charset "utf-8";
+@import url("menu.css");
+html, body {
+	font-size: 12px;
+	line-height: 25px;
+	font-family: "微軟正黑體", sans-serif;
+	letter-spacing: 1px;
+	width: 100%; /* 感謝建瑋法眼*/
+}
+/****** 三合一寫法font:14px 25px "微軟正黑體", sans-serif ********/
+h1, h2 {
+	font-size: 2.5em;
+}
+h3, h4 {
+	font-size: 1.6em;
+	line-height: 2em;
+}
+h5, h6 {
+	font-size: 1.3em;
+	line-height: 1.3em;
+}
+p {
+	margin-left: 10em;
+	/*	font-size: px;*/
+	line-height: 40px;
+}
+.wrapper {
+	width:100%;
+	background-color: #FFFFFF;
+}
+/*header{
+	box-shadow: 0px 5px 5px 0px #0F0F0F;
+	z-index: 999 !important;
+	-webkit-box-shadow: 0px 5px 5px 0px #0F0F0F;
+	}
+.wrap {z-index:95;}*/
+.box {
+	/*max-width: 1200px;*/
+    margin: 0px auto;
+    padding: 0px;
+    position: relative;	/******設定相對是BOX內的元素有要設定絕對,內元素若未設定絕對，則BOX的相對會以BODY為主******/
+	/* [disabled]background-color:#F4CAD4;
+*/
+}
+.box:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.box .row:after, .box .row:before {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+/*****版面: 溢位overflow-x:hidden ;overflow-y:hidden ****/
+.box .row:after {
+	clear: both;
+}
+.bgc .row {
+	background-image: url(../images/header3.jpg);
+	background-repeat: no-repeat;
+}
+.logo img {
+	max-width: 210px;
+}
+/*****max-height和 max-width 二選一，且手機銀幕寬最小三百，不要超過300****/
+
+a {
+	font-family: "微軟正黑體", sans-serif;
+}
+section {
+	position: relative;
+}
+section h1 {
+	padding: 1em;
+}
+section:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+section .row:after {
+	clear: both;
+}
+#news {
+	width: 100%;
+	display: block;
+}
+/*****輪播js以下******/
+.centered-btns_nav {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 38px;
+	height: 61px;
+	margin-top: -40px;
+	line-height: 200px;
+	background-image:url(../images/arrow.gif);
+	overflow: hidden;
+	opacity: .7;
+}
+.next {
+	right: 0;
+	background-position: right 0;
+}
+.centered-btns_nav:active {
+	opacity: 1;
+}
+.centered-btns_tabs {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 0;
+	list-style-type: none;
+}
+.centered-btns_tabs li {
+	display: inline-block;
+	margin: 0 3px;
+ *display: inline;
+ *zoom: 1;
+}
+.centered-btns_tabs a {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	line-height: 20px;
+	background-color: rgba(0, 0, 0, .3);
+	background-color: #ccc\9;
+	overflow: hidden;
+    *display: inline;
+    *zoom: 1;
+}
+.centered-btns_tabs .centered-btns_here a {
+	background-color: rgba(0, 0, 0, .8);
+	background-color: #666\9;
+}
+/*****輪播js以上******/
+#weddingdress h1, #photogallery h1, #weddingservice h1 {
+	background-color: #FFFFFF;
+	background-image: url(../images/title_bg.png);
+	background-repeat: no-repeat;
+	background-position: 46%;
+	background-size: 8%;
+}
+#weddingdress {
+	background-color: #FFFFFF;
+}
+#weddingdress .handmade {
+	background-color: #FFFFFF;
+}
+#weddingdress .innerbox {
+	padding: 0em 2em;
+	position: relative;
+	vertical-align: top;
+}
+#weddingdress .innerbox .innerbox-curtain {
+	transition: all 0.5s ease; /*transition轉場效果*/
+	-moz-transition: all 0.5s ease; /*firefox*/
+	-webkit-transition: all 0.5s ease;/*chrome*/
+	-o-transition: all 0.5s ease;/*opera*/
+	-ms-transition: all 0.5s ease;/*IE*/
+}
+#weddingdress .innerbox .innerbox-curtain {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	padding: 0.8em;
+	box-sizing: border-box;/*動態*/
+}
+#weddingdress .innerbox-curtain-table {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+#weddingdress .innerbox-curtain-table-cell {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;/*文字垂直置中*/
+}
+/*婚紗禮服方框中設定*/
+#weddingdress .innerbox span {
+	display: block;
+	text-align: center;
+	display: none;
+	color: rgba(0,0,0,0.45);
+}
+.item:hover {
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(255,255,255,0.76);
+	box-shadow: 4px 4px 5px 0px rgba(255,255,255,0.76);
+}
+/*滑鼠滑入後，字會出現*/
+.item:hover .innerbox .innerbox-curtain span {
+	display: block;
+}
+#weddingdress .innerbox:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: rgba(198,163,255,0.79);
+	z-index: 1;/*動作*/
+	-webkit-transform: scaleY(0);/*chrome*/
+	-webkit-transform-origin: 50% 100%;/*chrome*/
+	-webkit-transition-property: transform;/*chrome*/
+	-webkit-transition-duration: 0.3s;/*chrome*/
+	-webkit-transition-timing-function: ease-out;/*chrome*/
+	transform: scaleY(0);/*轉場*/
+	transform-origin: 50% 100%;/*轉場參考點*/
+	transition-property: transform;/*變化名稱*/
+	transition-duration: 0.3s/*變化時間*/;
+	transition-timing-function: ease-out; /*變化特效*/
+}
+.item:hover .innerbox:before {
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+}
+#weddingdress .dressstyle {
+	background-color: #FFFFFF;
+}
+/*****攝影作品以下***********/
+#photo5_1 {
+	max-height: 315px;
+	overflow: hidden;
+}
+/*/////////////////////////////////////////////以下是滑入圖片效果//////*/
+#light {
+	max-width:1300px;
+	width:100%;
+	height:700px;
+	position:relative;
+	margin:0 auto;
+	overflow-y:hidden;
+}
+#light2-1 {
+	max-width:1250px;
+	height:350px;
+	position:relative;
+	margin:0 auto 2em;
+	overflow:hidden;		
+	
+}
+#light img /*攝影作品*/ {
+	width:100%;
+	opacity: 1.0;
+	filter: alpha(opacity=100); /* 針對 IE8 以及更早的版本 */
+}
+#light img:hover {
+	opacity: 0.4;/*透明度*/
+	filter: alpha(opacity=40); /* 針對 IE8 以及更早的版本 */
+}
+/*light2 首頁婚禮服務*/
+#light2 innerbox{
+	position:relative;
+}
+#light2 img {
+	width:100%;
+	opacity: 0.8;
+	-webkit-filter: grayscale();/*灰值預設100*/
+	-moz-filter: grayscale();/*灰值預設100*/	
+}
+#light2 img:hover {
+	width:100%;
+	opacity: 1.0;
+	-webkit-filter: grayscale(0);/*0=回復彩色*/
+	-moz-filter: grayscale(0);/*0=回復彩色*/
+}
+#travelwedding img{
+	margin:0 4em;
+}
+/**/
+.fontG {
+	display: none;/*先隱藏*/
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.font {
+	display: table-cell;
+	width: 100%;/*height: 100%;*/
+}
+.font span {/*介紹文字*/
+	/*display: block;*/
+	display: none;/*先隱藏*/
+	color: #000;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -180px;/*font-size:0px;*/
+}
+#photo5 .font span {
+	top: -330px;
+	color: #000000;
+}
+.font2 span {/*婚禮服務的介紹文字，跟上面效果相反*/
+	display: block;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -15em;
+	left: 7em;
+}
+#travelwedding span {
+	top: -41.5em;
+	left: 27%;
+	color:#000000;
+}
+.block:before {
+	content: "";/*標題有before或after，一定要寫*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background-color: rgba(255,255,255,0.75);滑入的矩形顏色*/
+
+	z-index: 1px;
+	/*transform: scaleY(0);
+	transform-origin: 50% 100%;
+	transform-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;*/
+	-webkit-transform: scaleY(0);
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+}
+.block:hover .font span {
+	display: block;
+	/*background-color: #FFFFFF;*/
+	border: 2px none #FFFFFF;
+	width: 100%;
+}
+/*/////////////////////////////////////////////以上是滑入圖片效果//////*/
+/*首頁*/
+#photogallery {
+	background-image: url("../images/photoBG.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 100px;
+}
+.fontG hr {
+	width: 10em;
+	color: #2A2A2A;
+}
+.font h5 {
+	font-size: 1.5em;
+}
+.font h6 {
+	font-size: 0.8em;
+}
+.flexslider {
+	width: 100%;
+}
+.row-pho {
+	padding-top: 5em;
+	margin-bottom: 5em;
+}
+.ph-all {
+	display: inline-block;
+	padding-bottom: 5em;
+	text-align: center;
+}
+.itemJ {
+	max-width: 30%;
+	padding-bottom: 1em;
+	display: inline-block;
+}
+.itemJ img {
+	max-width: 80%;
+	/*max-height: 100%;*/
+	vertical-align: bottom;
+	display: inline-block;
+	padding: 2em 0;
+}
+/**/
+.actions {
+	padding-bottom: 5em;
+}
+.button {
+	cursor: pointer;/*滑鼠*/
+	background: #edb1bf;
+	color: #000;
+	font-size: 1.5em;
+	/*width: 20%;*/
+	padding: 1em 1em;
+	border-radius: 50% 50%;
+}
+.actions:hover a {
+	background-color: rgba(107,107,107,0.83);/*rgba是半透明效果*/
+	color: #FDDBDB;
+}
+#photo {
+	background: url(../images/allBG-2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;/*background-attachment:fixed;*/
+	/*background-position:bottom 100px 50%;*/
+	/*z-index:999999;*/
+}
+/*****攝影作品以上***********/
+/*****新娘秘書以下*************/
+section .pic {
+	padding-bottom: 3em;
+}
+#1 {
+	display: block;
+	float: left;
+	width: 50%;
+}
+#sinme .row-sin section img {
+	width:100%;
+}
+/*****新娘秘書以上*************/
+/*****旅拍以下******/
+.travelwedding {
+	background-color: #FFFFFF;
+	position: absolute;	
+	overflow: hidden;
+}
+#travelwedding a {
+	height: 100%;
+	width: 100%;
+}
+#menu #menu-button {
+	display: none;
+}
+/*////旅拍*/
+.item-t img {
+	/*max-width: 80%;*/
+	/*max-height: 100%;*/
+	width: 100%;
+	vertical-align: bottom;
+	display: inline-block;
+}
+.ph-all-tr {
+	display: inline-block;
+	margin-bottom: 5em;
+	text-align: center;
+}
+/*////旅拍分頁01/////*/
+.ph-tr {
+	display: inline-block;
+	margin-bottom: 5em;
+	text-align: center;
+}
+.item-tr {
+	max-width: 30%;
+	margin-bottom: 1em;
+	display: inline-block;
+}
+.item-tr img {
+	max-width: 80%;
+	/*max-height: 100%;*/
+	vertical-align: bottom;
+	display: inline-block;
+	padding: 2em 0;
+}
+/*****旅拍以上******/
+/*****婚禮服務以上***********/
+#photogallery .row {
+	background-image: url(../images/photoBG);
+	overflow-y: hidden;
+}
+#photogallery .innerbox {
+	padding: 2em 2em;
+}
+#weddingservice {
+	background-color: #FFFFFF;
+}
+#weddingservice .weddingplanner {
+	background-color: #FFFFFF;
+}
+#weddingservice .travelwedding {
+	background-color: #FFFFFF;
+}
+#menu #menu-button {
+	display: none;
+}
+footer {
+	background-image: url(../images/footer.jpg);
+	z-index: 9999;
+}
+footer p {
+	padding: 0;
+}
+/*****關於我們about*************/
+#about {
+	background-color: #FFFFFF;
+	padding: 5em;
+	background-image: url(../images/dressstyle_bg03.jpg);
+	background-attachment: fixed;
+}
+#about p {
+	margin: 2.8em;
+}
+#about h2 {
+	line-height: 2em;
+}
+#about h5 {
+	line-height: 2em;
+	color: #565656;
+}
+#about img {
+	padding: 3em 0 3em;
+}
+/*****禮服風格dressstyle以下***/
+#dressstyle-wrap, #handmade-wrap  {
+	position: relative;
+	max-width: 480px;
+	margin: 0 auto;
+}
+#slider-pager {
+	width:100%;
+	text-align: left;
+	list-style-type: none;
+	background-color: #FFFFFF;
+	margin: 1em auto 0em;/*	position:absolute;
+	top:0;
+	right:24%;*/
+}
+#slider-pager a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+#slider-pager li {
+	display:inline-block;
+	float: left;
+	padding: 5px;
+	width: calc(100%/10);
+	/*max-width:70px;*/
+	height: auto;
+ *zoom: 1;
+}
+#slider-pager .rslides_here {
+	border: 5px solid #E8BCFF;
+}
+#slider-pager img {
+	border: 0;
+	width: 100%;
+}
+/*****禮服風格dressstyle以上***/
+/*****婚禮影片weddingfilm以下***/
+#weddingfilm {
+	background-color: #B0D1F8;
+	background-image: url(../images/weddingfilm_bg02.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding: 1em;
+	margin: 0 auto;
+	position:relative;
+}
+#weddingfilm #row1-1 {
+	background-image: url(https://www.youtube.com/watch?v=uxsqGrg73CM);
+	background-color: #FFFFFF;
+	overflow-x: border-box;
+}
+#weddingfilm #row1-2 {
+	background-image: url(https://www.youtube.com/watch?v=uxsqGrg73CM);
+	background-color: #FFFFFF;
+	overflow-x: border-box;
+}
+/*****婚禮影片weddingfilm以上***/
+/*****連絡我們contact以下***/
+header, main {
+	position: relative;
+	z-index: 1;	
+}
+header {
+	/*box-shadow:0px 2px 10px rgba(154,154,154,0.71);*/
+	-webkit-box-shadow: 0px 2px 10px #7E7E7E;
+	box-shadow: 0px 2px 10px #7E7E7E;
+	/*box-shadow:inset 3px 10px 12px #000;*/
+	z-index: 999;
+	
+}
+#contact {
+	background-image: url(../images/contact_bg01.jpg);
+	background-attachment: fixed;
+}
+[class*="w"] {
+	display: block;
+}
+#contact .table {
+	width: 100%;
+	max-width: 900px;
+	display: table;
+	margin: 0 auto 3em;
+	table-layout: fixed;
+	border-collapse: collapse;
+	background-color: rgba(248, 232, 232, 0.48);
+}
+.table > [class*="w"] {
+	display: table-cell !important;
+	position: relative;
+	float: none;
+	padding-left: 3em;
+	padding-right: 3em;
+	vertical-align: top;
+}
+.paper > [class*="w"] {
+	margin: 1em;
+}
+input, textarea, select {
+	padding: 0 15px;
+	width: 100%;
+	height: 2.5em;
+	background: none;
+	background-color: #FDF0F999;
+	border-bottom: hidden solid #000000;
+	border-radius: 1em;
+	font-size: large;
+}
+label {
+	margin: 1em;
+	font-size: 1.5em;
+	float: left;	
+}
+/*替姓名前+必填*/
+/*label:before {
+	content: "*";
+	color: #FF0004;
+	font-size: 1.5em;
+}*/
+#name, #phone, #email {	
+	background-size:contain;
+	background-repeat:no-repeat;
+	padding:0 3em;	
+}
+#name {
+	background-image: url(../images/name.png);
+}
+#phone {
+	background-image: url(../images/phone.png);
+}
+#email {
+	background-image: url(../images/mail.png);
+}
+#serviceitems:before, #content:before {
+	content: "";
+}
+textarea {
+	resize: none; /*不會破壞版面*/
+	height: 6em;
+}
+.sendButton {
+	cursor: pointer;
+	background: #F86CF133;
+	width: 20%;
+	color: #000000;
+	padding: 2px 0;
+	margin-right: 1em;
+	border-radius: 1em;
+}
+center {
+	margin: 1em auto 2em;
+}
+#contact iframe {
+	margin: 0 auto;
+	max-width: 900px;
+	height: 400px;
+	width: 100%;
+}
+
+
+/*****連絡我們contact以上***/
+
+@media screen and (min-width:300px) and (max-width:479px) {
+.wrap {
+	/*display: none;*/
+}
+.bgc .row{
+	background-image: url(../images/header3.jpg);
+	background-repeat: repeat;
+}
+#weddingdress h1, #photogallery h1, #weddingservice h1{
+	background-position: 28%;
+    background-size: 28%;
+}
+#weddingdress {
+	margin-top: 0;
+	margin-bottom:0;
+}
+#weddingdress .w50 {
+	width: 100%;
+	margin-bottom:2em;	
+}
+#dressstyle-wrap, #handmade-wrap  {
+	position: relative;
+	max-width: 480px;
+	width:100%;
+	margin: 0 auto;
+}
+#photogallery{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+section h1 {
+	padding:0.5em;
+}
+#photogallery .w50{
+	width:100%;
+	float:none;
+}
+#photogallery .row{
+	overflow-y:visible;
+}
+#light{
+	height:auto;	
+}
+#photogallery [class ^="w"] {
+	width:100%;
+	display: block !important;	
+}
+#photogallery .innerbox{
+	padding: 1em 2em;
+}
+.innerbox a {
+	width: 100%;	
+}
+/**/
+.fontG {
+	display: none;/*先隱藏*/
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.font {
+	display: table-cell;
+	width: 100%;/*height: 100%;*/
+}
+.font span, #photo5 .font span {/*介紹文字*/
+	/*display: block;*/
+	display: none;/*先隱藏*/
+	color: #000;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -160px;/*font-size:0px;*/
+}
+#photo5 .font span {
+	position:absolute;
+	top: -160px;
+	color: #000000;
+	
+}
+.font2 span {/*婚禮服務的介紹文字，跟上面效果相反*/
+	display: block;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -15em;
+	left: 7em;
+}
+#travelwedding span {
+	top: -41.5em;
+	left: 27%;
+	color:#000000;
+}
+.block:before {
+	content: "";/*標題有before或after，一定要寫*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background-color: rgba(255,255,255,0.75);滑入的矩形顏色*/
+
+	z-index: 1px;
+	/*transform: scaleY(0);
+	transform-origin: 50% 100%;
+	transform-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;*/
+	-webkit-transform: scaleY(0);
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+}
+.block:hover .font span {
+	display: block;
+	/*background-color: #FFFFFF;*/
+	border: 2px none #FFFFFF;
+	width: 100%;
+}
+/*/////////////////////////////////////////////以上是滑入圖片效果//////*/
+#photo3 img {
+	background-position: -100px 0px;
+	background-repeat: no-repeat;
+}
+#photo4 img {
+	background-position: -150px 0px;
+	background-repeat: no-repeat;
+}
+#photo5 img {
+	background-position: -300px 0px;
+	background-repeat: no-repeat;
+}
+.innerbox #photo3, .innerbox #photo4, .innerbox #photo5 {
+	width: 100%;
+	max-width: 300px;
+	height: 300px;
+	overflow-x: hidden;
+}
+/*****關於我們about以下********/
+#about {
+	padding:1em;
+}
+#about .row{
+	margin: 1em 0;
+}
+#about img {
+	padding:0;
+}
+#about .w40, #about .w50 {
+	width:100%;
+	margin:0;	
+}
+#about .w40 {
+	padding:1em;	
+}
+/*****關於我們about以上********/
+/*****攝影作品photo以下*******/
+.itemJ {
+    max-width: 100%; 
+    padding-bottom: 1em;
+    display: inline-block;
+}
+/*****攝影作品photo以上*******/
+/*****婚禮影片weddingfilm以下**/
+#weddingfilm .w40 {
+	width:80%;	
+	position:relative;
+	top:3em;
+	left:2em;
+	margin-left:0em;
+}
+/*****婚禮影片weddingfilm以上**/
+/*****新娘秘書weddingplanner以下*/
+#sinme .row-sin section img {
+	width:100%;
+}
+/*****新娘秘書weddingplanner以上*/
+/*****旅拍travel以下**********/
+#weddingservice{
+	clear:both;
+}
+#light2 .row .w30 {
+	width:100%;
+	float:none;
+}
+#light2-1 {
+	height:auto;
+	overflow:visible;
+	position: relative;
+	margin:2em 2em;	
+}
+#light2-1 .w30 {
+	margin-bottom:2em;	
+}
+#light2-1 .w70 {
+	margin-bottom:0;		
+}
+#photo .row-pho {
+	margin-bottom:0;
+}
+#photo .item-tr {
+	max-width:100%;
+}
+#travelwedding{
+	height:150px;
+}
+#photo #light2 .w33{
+	width:100%;
+}
+#traverwedding a{
+	height:auto;
+}
+#travelwedding img{
+	margin:0;
+}
+.font2 span{
+	position:absolute;
+    top: -16em;
+    left: 1.5em;
+}
+#travelwedding a{
+	height:	auto;
+}
+#travelwedding span{
+	top:-11em;
+	left: 10%;
+    color: #ffffff;
+}
+footer{
+	padding-left:3em;
+	padding-right:5em !important;
+	text-align:justify !important; 
+	font-size:9px;
+	
+}
+/*****旅拍travel以上**********/
+/*****禮服風格dressstyle以下***/
+#dressstyle-wrap, #handmade-wrap  {
+	position: relative;
+	max-width: 480px;
+	margin: 0 auto;
+}
+#slider-pager {
+	width:100%;
+	text-align: left;
+	list-style-type: none;
+	background-color: #f5e3f3;
+	margin: 1em auto 0em;/*	position:absolute;
+	top:0;
+	right:24%;*/
+}
+#slider-pager a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+#slider-pager li {
+	display:inline-block;
+	float: left;
+	padding: 5px;
+	width: calc(100%/10);
+	/*max-width:70px;*/
+	height: auto;
+ *zoom: 1;
+}
+#slider-pager .rslides_here {
+	border: 5px solid #E8BCFF;
+}
+#slider-pager img {
+	border: 0;
+	width: 100%;
+}
+/*****禮服風格dressstyle以上***/
+/*****連絡我們contact以下******/
+#contact .row1 h1 {
+	padding: 2em 0 1em 0;
+}
+#ss-form .w50 {
+	width:100%;
+}
+.traffic {
+	margin: 3em 1em;
+}
+/*****連絡我們contact以上******/
+}
+@media screen and (min-width:480px) and (max-width:768px) {
+.wrap {
+	/*display: none;*/
+}
+.bgc .row{
+	background-image: url(../images/header3.jpg);
+	background-repeat: repeat;
+}
+#weddingdress h1, #photogallery h1, #weddingservice h1{
+	background-position: 28%;
+    background-size: 28%;
+}
+#weddingdress {
+	margin-top: 0;
+	margin-bottom:0;
+}
+#weddingdress .w50 {
+	width: 100%;
+	margin-bottom:2em;	
+}
+#dressstyle-wrap, #handmade-wrap  {
+	position: relative;
+	max-width: 480px;
+	width:100%;
+	margin: 0 auto;
+}
+#photogallery{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+section h1 {
+	padding:0.5em;
+}
+#photogallery .w50{
+	width:100%;
+	float:none;
+}
+#photogallery .row{
+	overflow-y:visible;
+}
+#light{
+	height:auto;	
+}
+#photogallery [class ^="w"] {
+	width:100%;
+	display: block !important;	
+}
+#photogallery .innerbox{
+	padding: 1em 2em;
+}
+.innerbox a {
+	width: 100%;	
+}
+/**/
+.fontG {
+	display: none;/*先隱藏*/
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.font {
+	display: table-cell;
+	width: 100%;/*height: 100%;*/
+}
+.font span {/*介紹文字*/
+	/*display: block;*/
+	display: none;/*先隱藏*/
+	color: #000;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -180px;/*font-size:0px;*/
+}
+#photo5 .font span {
+	top: -180px;
+	color: #000000;
+}
+.font2 span {/*婚禮服務的介紹文字，跟上面效果相反*/
+	display: block;
+	color: #FFFFFF;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 2;
+	top: -15em;
+	left: 7em;
+}
+#travelwedding span {
+	top: -41.5em;
+	left: 27%;
+	color:#000000;
+}
+.block:before {
+	content: "";/*標題有before或after，一定要寫*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*background-color: rgba(255,255,255,0.75);滑入的矩形顏色*/
+
+	z-index: 1px;
+	/*transform: scaleY(0);
+	transform-origin: 50% 100%;
+	transform-property: transform;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-out;*/
+	-webkit-transform: scaleY(0);
+	-webkit-transform-origin: 50% 100%;
+	-webkit-transform-property: transform;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+}
+.block:hover .font span {
+	display: block;
+	/*background-color: #FFFFFF;*/
+	border: 2px none #FFFFFF;
+	width: 100%;
+}
+/*/////////////////////////////////////////////以上是滑入圖片效果//////*/
+#photo3 img {
+	background-position: -100px 0px;
+	background-repeat: no-repeat;
+}
+#photo4 img {
+	background-position: -150px 0px;
+	background-repeat: no-repeat;
+}
+#photo5 img {
+	background-position: -300px 0px;
+	background-repeat: no-repeat;
+}
+.innerbox #photo3, .innerbox #photo4, .innerbox #photo5 {
+	width: 100%;
+	max-width: 300px;
+	height: 300px;
+	overflow-x: hidden;
+}
+/*****關於我們about以下********/
+#about {
+	padding:1em;
+}
+#about .row{
+	margin: 1em 0;
+}
+#about img {
+	padding:0;
+}
+#about .w40, #about .w50 {
+	width:100%;
+	margin:0;	
+}
+#about .w40 {
+	padding:3em;	
+}
+#about .w40 h2 {
+	text-align:center;
+}
+
+/*****關於我們about以上********/
+/*****攝影作品photo以下*******/
+.itemJ {
+    max-width: 100%; 
+    padding-bottom: 1em;
+    display: inline-block;
+}
+/*****攝影作品photo以上*******/
+/*****婚禮影片weddingfilm以下**/
+#weddingfilm .w40 {
+	width:80%;	
+	margin-left:3.8em;
+	margin-right:3.8em;
+	position:relative;
+	top:4em;
+}
+/*****婚禮影片weddingfilm以上**/
+/*****新娘秘書weddingplanner以下*/
+#sinme .row-sin section img {
+	width:100%;
+}
+/*****新娘秘書weddingplanner以上*/
+/*****旅拍travel以下**********/
+#weddingservice{
+	clear:both;
+}
+
+#light2 .row .w30 {
+	width:100%;
+	float:none;
+}
+#light2-1 {
+	height:auto;
+	overflow:visible;
+	position: relative;
+	margin:2em 2em;	
+}
+#light2-1 .w30 {
+	margin-bottom:2em;		
+}
+#light2-1 .w70 {
+	margin-bottom:7em;			
+}
+#photo .row-pho {
+	margin-bottom:0;
+}
+#photo .item-tr {
+	max-width:100%;
+}
+#travelwedding{
+	height:150px;
+}
+#traverwedding a{
+	height:auto;
+}
+#travelwedding img{
+	margin:0;
+}
+.font2 span{
+	position:absolute;
+    top: -15em;
+    left: 30%;
+}
+#light2 span h2 {
+	font-size: 3em;
+}
+#light2 span h5, #light2 span h6 {
+	font-size: 1.3em;
+	light-height: 1.3em;
+}
+#photo #light2 .w33{
+	width:100%;
+}
+#travelwedding a{
+	height:	auto;
+}
+#travelwedding span{
+	top:-12em;
+	left: 24%;
+    color: #ffffff;
+}
+footer{
+	padding-left:3em;
+	text-align:justify !important; 
+	
+}
+/*****旅拍travel以上**********/
+/*****禮服風格dressstyle以下***/
+#dressstyle-wrap, #handmade-wrap  {
+	position: relative;
+	max-width: 480px;
+	margin: 0 auto;
+}
+#slider-pager {
+	width:100%;
+	text-align: left;
+	list-style-type: none;
+	background-color: #f5e3f3;
+	margin: 1em auto 0em;/*	position:absolute;
+	top:0;
+	right:24%;*/
+}
+#slider-pager a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFFF;
+}
+#slider-pager li {
+	display:inline-block;
+	float: left;
+	padding: 5px;
+	width: calc(100%/10);
+	/*max-width:70px;*/
+	height: auto;
+ *zoom: 1;
+}
+#slider-pager .rslides_here {
+	border: 5px solid #E8BCFF;	
+}
+#slider-pager img {
+	border: 0;
+	width: 100%;
+}
+/*****禮服風格dressstyle以上***/
+/*****連絡我們contact以下******/
+#contact .row1 h1 {
+	padding: 2em 0 1em 0;
+}
+#ss-form .w50 {
+	width:100%;
+}
+.traffic {
+	margin: 3em 2em;
+}
+/*****連絡我們contact以上******/
+
+}

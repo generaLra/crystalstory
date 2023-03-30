@@ -1,0 +1,208 @@
+@charset "utf-8";
+#menu, #menu ul, #menu ul li, #menu ul li a, #menu #menu-button {
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#menu li {
+	float: left;
+}
+#menu a {
+	padding: 1.5em 1em;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 1.2em;
+}
+#menu li:hover {
+	background-image: url(../images/logo_bg.png);
+	color: #FFFFFF;
+	text-shadow: 0 -2px 100px #FFFFFF;
+}
+/*#menu li:hover a {
+	background-color: #44D2F5;
+	color: rgba(255,255,255,1.00);
+}*/
+#menu #menu-button {
+	display: none;
+}
+
+#menu .logo-s:hover {
+	background-image: url(../images/logo_bg_small.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.top {/*top按鈕*/
+	border: 1px solid #cc99a5;
+	border-radius: 80% 80%;
+	background-color:#ecb0be;
+	color:#565656;
+	padding: 1em;
+	position: fixed;/*定位:固定*/
+	right: 10px;
+	bottom: 0px;
+	z-index: 99999999999; /*圖層*/
+}
+.top:hover a{
+	color: #000000;
+}
+
+/*300~479*/
+@media screen and (min-width:300px) and (max-width:479px) {
+#menu {
+	width:100%;
+	background-color: #f5cfda;
+}
+#menu a {
+	color: #FFFFFF;
+}
+#menu ul {
+	width: 100%;
+	display: none;
+}
+#menu ul li {
+	width: 11.1%;
+	border-top: 1em solid #fac4d1; /*邊框上線條*/
+}
+/***************************/
+/*RWD手機板才會出現的*/
+#menu #menu-button {
+	display: block;
+	padding: 17px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bolder;
+	background-image: url(../images/header3.jpg);
+}
+#menu #menu-button:after {
+	content: "";
+	position: absolute;
+	top: 22px;
+	right: 17px;
+	height: 4px; /*線高*/
+	width: 20px; /*線寬*/
+	border-top: 2px solid #DB03F9;
+	border-bottom: 2px solid #FC3DDD;
+	display: block;
+}
+#menu #menu-button:before {
+	content: "";
+	position: absolute;
+	top: 16px;	
+	right: 17px;	
+	height: 2px; /*矩形的高*/
+	width: 20px; /*矩形的寬*/
+	display: block;
+	background: #bb03f8;
+}
+/*漢堡變XX*/
+#menu #menu-button.menu-opened:after {/*這個為下拉選單右邊的三條槓的其中上跟下*/
+	content: "";
+	top: 23px;
+	height: 2px;
+	width: 15px;
+	border: 0;
+	background-color: #F7F4F4;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+#menu #menu-button.menu-opened:before {
+	content: "";
+	top: 23px;
+	width: 15px;
+	background-color: #F7F4F4;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+/***************************/
+.logo {
+	position: relative;
+	left: 22%;
+}
+.logo img {
+	width:100%;
+}
+
+}
+/*480~768*/
+@media screen and (min-width:480px) and (max-width:768px) {
+#menu {
+	width:100%;
+	background-color: #f5cfda;
+}
+#menu a {
+	color: #FFFFFF;
+}
+#menu ul {
+	width: 100%;
+	display: none;
+}
+#menu ul li {
+	width: 11.1%;
+	border-top: 1em solid #fac4d1; /*邊框上線條*/
+}
+/***************************/
+/*RWD手機板才會出現的*/
+#menu #menu-button {
+	display: block;
+	padding: 17px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bolder;
+	background-image: url(../images/header3.jpg);
+}
+#menu #menu-button:after {
+	content: "";
+	position: absolute;
+	top: 22px;	
+	right: 17px;	
+	height: 4px; /*線高*/
+	width: 20px; /*線寬*/
+	border-top: 2px solid #DB03F9;
+	border-bottom: 2px solid #FC3DDD;
+	display: block;
+}
+#menu #menu-button:before {
+	content: "";
+	position: absolute;
+	top: 16px;	
+	right: 17px;	
+	height: 2px; /*矩形的高*/
+	width: 20px; /*矩形的寬*/
+	display: block;
+	background: #bb03f8;
+}
+/*漢堡變XX*/
+#menu #menu-button.menu-opened:after {/*這個為下拉選單右邊的三條槓的其中上跟下*/
+	content: "";
+	top: 23px;
+	height: 2px;
+	width: 15px;
+	border: 0;
+	background-color: #F7F4F4;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+#menu #menu-button.menu-opened:before {
+	content: "";
+	top: 23px;
+	width: 15px;
+	background-color: #F7F4F4;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+/***************************/
+.logo {
+	position: relative;
+	left: 32%;
+}
+.logo img {
+	width:100%;
+}
+}

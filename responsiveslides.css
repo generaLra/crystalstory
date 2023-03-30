@@ -1,0 +1,101 @@
+/*! http://responsiveslides.com v1.54 by @viljamis */
+
+.rslides {
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+.rslides li {
+	-webkit-backface-visibility: hidden;
+	position: absolute;
+	display: none;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+#handmade-wrap .rslides, #dressstyle-wrap .rslides{
+	max-width:480px;
+}
+
+/*********首頁輪播以下*******/
+.rslides li:first-child {
+	position: relative;
+	display: block;
+	float: left;
+}
+.rslides img {
+	display: block;
+	height: auto;	
+	border: 0;
+	margin:0 auto;	
+}
+.wrap {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+/*	background-color: #FFFFFF;*/	/*background-image:url(../images/weddingfilm_bg01.jpg);*/
+}
+#dressstyle-main, #handmade-main{
+	background-image:url(../images/dressstyle_bg03.jpg);
+	background-attachment:fixed;
+}
+
+.rslides li {
+	position: relative;
+}
+.rslides p {
+	position: absolute;
+	left: 500px;
+	bottom: 20px;
+	z-index: -99;
+	width: 100%;
+	margin: 0;
+	padding: 0 10px;
+	height: 300px;
+	line-height: 2em;
+	font-size: 1em;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #666\9;
+}
+.centered-btns_nav {
+	position: absolute;
+	top: 50%;
+	z-index: 2;
+	width: 38px;
+	height: 61px;
+	margin-top: -40px;
+	line-height: 200px;
+	background-image: url(images/arrow.gif);
+	overflow: hidden;
+	opacity: .7;
+}
+.next {
+	right: 0;
+	background-position: right 0;
+}
+.centered-btns_nav:active {
+	opacity: 1;
+}
+/*********首頁輪播以上*******/
+/*********禮服風格以下*******/
+
+#dressstyle .rslides img {
+	width:100%;
+}
+/*********禮服風格以上*******/
+/*********手工訂製以下*******/
+#handmade .rslides img{
+	width:100%;		
+}
+/*********手工訂製以上*******/
+/*********婚禮影片以下*******/
+#weddingfilm-slide .rslides img{
+	width: 100%;
+	max-height: 600px;	
+ 	overflow-y: hidden;		
+}
+/*********婚禮影片以上*******/
