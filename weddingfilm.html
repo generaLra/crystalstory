@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="本網站無任何商業行為，均為排版套用，圖片來源參考:google，高雄翡麗婚紗，台中茱莉亞婚紗，蘇菲設計,影片來源:姊妹淘">
+<title>水晶童話</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/all.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/menu.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/responsiveslides.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+<a href="#" class="top">TOP</a>
+  <header class="bgc">
+    <div class="box">
+      <div class="row">
+        <nav id="menu" class="f-r inl-bl ta-c">
+          <ul>
+            <li><a href="about.html">關於我們</a></li>
+            <li><a href="index.html#weddingdress">婚紗禮服</a></li>
+            <li><a href="index.html#photogallery">攝影作品</a></li>
+            <li><a href="weddingfilm.html">婚禮影片</a></li>
+            <li><a href="index.html#weddingservice">婚禮服務</a></li>
+            <li><a href="contact.html">線上預約</a></li>
+            <li class="logo-s"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="logo-s"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="logo-s"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </nav>
+        <a class="logo" href="index.html"><img src="images/logo4.png" alt="水晶童話logo"/></a> </div>
+    </div>
+  </header>
+  <main>
+    <div class="box"> 
+      <!--輪播的html以下-->
+      <div class="weddingfilm-wrap" id="weddingfilm-slide">
+        <ul class="rslides" id="dowebok">
+          <li> <a href="#" ><img class="img-100" src="images/weddingfilm_slider01.jpg" alt=""/></a> </li>
+          <li> <a href="#" ><img class="img-100" src="images/weddingfilm_slider02.jpg" alt=""/></a> </li>
+          <li> <a href="#" ><img class="img-100" src="images/weddingfilm_slider03.jpg" alt=""/></a> </li>
+        </ul>
+      </div>
+      <div class="abc"></div>
+      <!--輪播的html以上--> 
+      
+    </div>
+    <!--------------婚禮影片------------>
+    <section class="cf ta-c" id="weddingfilm"> 
+      <!--------------標題------------>
+      <div class="row0">
+        <h1 class="weddingfilm">婚禮影片</h1>
+      </div>
+      <!--------------婚禮影片欄1------------>
+      <div class="row1">
+        <div class="w40 f-l inl-bl m-tb3 m-lr2 m-l5 smoove" data-move-x="-50%" id="row1-1">
+          <div style="position:relative;height:0;padding-bottom:56.25%">
+            <iframe src="https://www.youtube.com/embed/Pn31DdrBFK4?rel=0&amp;showinfo=0?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="w40 f-r inl-bl m-tb3 m-lr2 m-r5 smoove" data-move-x="50%" id="row1-2">
+          <div style="position:relative;height:0;padding-bottom:56.25%">
+            <iframe src="https://www.youtube.com/embed/Oa74p_XWIrs?rel=0&amp;showinfo=0?ecver=2" width="160" height="90" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+<footer class="pt1 pb1 ta-r pr6"> &copy;2017  CrystalStory  本網站無任何商業行為<br>
+    圖片來源為google，高雄翡麗婚紗，台中茱莉亞婚紗，蘇菲設計   影片來源為youtube&#8218;姊妹淘</footer>
+</div>
+
+<!--------輪播的ｊｓ以下--------> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/responsiveslides.min.js"></script> 
+<script>$(function(){$('#dowebok').responsiveSlides({pager: true,　nav: true,　namespace: 'centered-btns',});});
+</script> 
+<!--------輪播的ｊｓ以上-------->
+<script src="js/jquery.smoove.js"></script><!--smoove的js-->
+<script>$(function(){$(".smoove").smoove({offset:"30%",})})</script><!--smoove的JS-->
+<!--TOP-->
+<script>$('.top').click(function(){$('html,body').animate({scrollTop:$('#wrapper').offset().top},100)});</script>
+<!---->
+</body>
+</html>
